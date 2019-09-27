@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- CSS Section -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/slider-pro.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="js/username.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <!-- End CSS Section -->
+
+    <title>St Paul's Liquor Shop</title>
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" onload="fetchData()">
+
+<!-- Preloader -->
+<div class="preloader">
+    <div class="status"></div>
+</div>
+
+
+<!-- Header Start -->
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <a href="../"><img src="images/drawing.svg" style="height:40px;width:120px;border:none; align:left;"></a>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a id=88 href="" data-toggle="" data-target="">NULL</a></li>
+                <li><a href="/user/order/orderForUser" data-toggle="" data-target="">CART</a></li>
+                <li><a href="" data-toggle="modal" data-target="#signup-modal">SIGN UP</a></li>
+                <li><a href="" data-toggle="modal" data-target="#login-modal">LOG IN</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="jumbotron text-center">
+    <div style="height:20%;">
+        <h1></h1>
+    </div>
+    <div style="height:15%;">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-2">
+                <button data-toggle="modal" data-target="" type="button" class="btn btn-default"><a
+                        href="/wine">WINE</a></button>
+            </div>
+            <div class="col-sm-2">
+                <button data-toggle="modal" data-target="" type="button" class="btn btn-default"><a href="/spirit">SPIRIT</a>
+                </button>
+            </div>
+            <div class="col-sm-2">
+                <button data-toggle="modal" data-target="" type="button" class="btn btn-default"><a
+                        href="/beer">BEER</a></button>
+            </div>
+            <div class="col-sm-2">
+                <button data-toggle="modal" data-target="" type="button" class="btn btn-default"><a
+                        href="/other">OTHER</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div style="height:80%;">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-2">
+                <button data-toggle="modal" data-target="" type="button" class="btn btn-default"><a href="/recipes">RECIPES</a>
+                </button>
+            </div>
+            <div class="col-sm-2">
+                <button data-toggle="modal" data-target="" type="button" class="btn btn-default"><a
+                        href="/bars">BARS</a></button>
+            </div>
+            <div class="col-sm-2">
+                <button data-toggle="modal" data-target="" type="button" class="btn btn-default"><a
+                        href="/deals">DEALS</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" style="display: none;">
+        <div class="modal-dialog">
+            <div class="loginmodal-container">
+                <h3>Register for a new Account</h3><br>
+                <form action='/newuser' method='get'>
+                    <input type="text" name="user" placeholder="Username" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input type="password" name="pass" placeholder="Password" required>
+                    <input type="submit" name="signup" class="login loginmodal-submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" style="display: none;">
+        <div class="modal-dialog">
+            <div class="loginmodal-container">
+                <h3>Login to Your Account</h3><br>
+                <form action='/user' method='get'>
+                    <input type="text" name="log_user" placeholder="Username" required>
+                    <input type="password" name="log_pass" placeholder="Password" required>
+                    <input type="submit" name="login" class="login loginmodal-submit" value="LOGIN">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Slider Start -->
+    <section class="slider-pro slider" id="slider">
+        <div class="sp-slides">
+
+            <!-- Slides -->
+            <div class="sp-slide main-slides">
+                <div class="img-overlay"></div>
+                <img class="sp-image" src="images/slider/slider-wine4.jpg" alt="Slider 1"/>
+                <h1 class="sp-layer slider-text-big" data-position="center" data-show-transition="left"
+                    data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
+                    <span><a href="/wine"
+                             style="color:white; text-decoration:none; font-family:'Courier New';">Wine</a></span>
+                </h1>
+                <p class="sp-layer" data-position="center" data-vertical="15%" data-show-delay="2000"
+                   data-hide-delay="200" data-show-transition="left" data-hide-transition="right">
+                    <a style="color:white; text-decoration:none; font-family:'Courier New';">
+                        <br>
+                        Alcohol by volume: 5.5–15.5%<br>
+                        Ingredients: Grapes<br>
+                        Variants: Red White Rosé Amber Sparkling<br>
+                    </a>
+                </p>
+            </div>
+            <!-- Slides End -->
+
+            <!-- Slides -->
+            <div class="sp-slide main-slides">
+                <div class="img-overlay"></div>
+                <img class="sp-image" src="images/slider/slider-spirits.jpg" alt="Slider 2"/>
+
+                <h1 class="sp-layer slider-text-big" data-position="center" data-show-transition="left"
+                    data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
+                    <span><a href="/spirit"
+                             style="color:white; text-decoration:none; font-family:'Courier New';">Spirit</a></span>
+                </h1>
+                <p class="sp-layer" data-position="center" data-vertical="15%" data-show-delay="2000"
+                   data-hide-delay="200" data-show-transition="left" data-hide-transition="right">
+                    <a style="color:white; text-decoration:none; font-family:'Courier New';">
+                        <br>
+                        Alcohol by volume: Over 30%<br>
+                        Ingredients: Grains Fruit or Vegetables<br>
+                        Variants: Brandy Vodka Baijiu Gin Rum Tequila Mezcal Whisky<br>
+                    </a>
+                </p>
+            </div>
+            <!-- Slides End -->
+
+            <!-- Slides -->
+            <div class="sp-slide main-slides">
+                <div class="img-overlay"></div>
+                <img class="sp-image" src="images/slider/slider-beer6.jpg" alt="Slider 3"/>
+                <h1 class="sp-layer slider-text-big" data-position="center" data-show-transition="left"
+                    data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
+                    <span><a href="/beer"
+                             style="color:white; text-decoration:none; font-family:'Courier New';">Beer</a></span>
+                </h1>
+                <p class="sp-layer" data-position="center" data-vertical="15%" data-show-delay="2000"
+                   data-hide-delay="200" data-show-transition="left" data-hide-transition="right">
+                    <a style="color:white; text-decoration:none; font-family:'Courier New';">
+                        <br>
+                        Alcohol by volume: 4–6%<br>
+                        Ingredients: Cereal grains Alcohol Water<br>
+                        Variants: Ale Bock Kölsch Lager Lambic Malt Liquor Pilsner Porter Stout Wheat<br>
+                    </a>
+                </p>
+            </div>
+            <!-- Slides End -->
+
+            <!-- Slides -->
+            <div class="sp-slide main-slides">
+                <div class="img-overlay"></div>
+                <img class="sp-image" src="images/slider/slider-other2.jpg" alt="Slider 4"/>
+                <h1 class="sp-layer slider-text-big" data-position="center" data-show-transition="left"
+                    data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
+                    <span><a href="/other"
+                             style="color:white; text-decoration:none; font-family:'Courier New';">Other</a></span>
+                </h1>
+                <!-- Slides End -->
+
+            </div>
+        </div>
+    </section>
+    <!-- Main Slider End -->
+
+    <section id="history" class="about-sec section-wrapper description">
+        <div class="container">
+            <div class="row">
+                <!-- Section Header -->
+                <div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
+                    <p style="font-size:50px;">History</p>
+                    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1"></p>
+                </div>
+                <!-- Section Header End -->
+
+                <div class="col-md-6 col-sm-6 col-xs-12 custom-sec-img wow fadeInDown">
+                    <img src="images/history.jpg" alt="Historia">
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-12 customized-text wow fadeInDown black-ed">
+                    <p style="color: #828282;">Established in May 2019, StPauls.com is an unpublished
+                        website that specialises in selling alcohol products including wine, beer and
+                        spirits and also provides other facilities to our customers such as cocktail
+                        recipes and guide to bars nearby. Currently we have 30+ drinks to choose from
+                        and the number will keep increasing as the website is developed. Also many other
+                        facilities are under construction now and will be available soon, including the
+                        customer review sections and discount system. We believe that we will soon become
+                        the best liquor selling website in Bristol.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- History Section End -->
+
+    <section id="contact" class="about-sec section-wrapper description">
+        <div class="container">
+            <div class="row">
+                <!-- Section Header -->
+                <div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
+                    <p style="font-size:50px;">Contact</p>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
+                    <p style="font-size:32px;">Email Address:js18295@bristolac.uk</p>
+                    <p style="font-size:32px;">Telephone Number:07923217621</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="footer-containertent">
+                    <svg height="130" width="500">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:rgb(255,100,0);stop-opacity:1"/>
+                                <stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:1"/>
+                            </linearGradient>
+                        </defs>
+                        <ellipse cx="250" cy="70" rx="80" ry="60" fill="url(#grad1)"/>
+                        <text fill="#ffffff" font-size="45" font-family="Arial" x="190" y="86">Liquor</text>
+                        Sorry, your browser does not support inline SVG.
+                    </svg>
+                    <br>
+                    <iframe src="/images/logo.svg" style="border:none;height:400px;width:600px;"></iframe>
+                    <br>
+                    <svg height="500" width="500" style="fill:RGB(255, 180, 0);">
+                        <path d="
+                        M 231.000 251.000
+                        L 254.511 263.361
+                        L 250.021 237.180
+                        L 269.042 218.639
+                        L 242.756 214.820
+                        L 231.000 191.000
+                        L 219.244 214.820
+                        L 192.958 218.639
+                        L 211.979 237.180
+                        L 207.489 263.361
+                        L 231.000 251.000
+                        "/>
+                        Sorry, your browser does not support inline SVG.
+                    </svg>
+                    <br>
+                    <p>© 2018-2019, StPauls.com, Inc. or its affiliates</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+</div>
+
+
+
+<!-- JavaScript Section -->
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.nav.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.sliderPro.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order</title>
+    <style type="text/css">
+        th, tr {
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-top-color: rgb(230, 189, 189);
+        }
+        table {
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: rgb(230, 189, 189);
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+        td, th {
+            padding: 5px 10px;
+            font-size: 20px;
+            font-family: Verdana;
+            color: white;
+        }
+        table tr:nth-child(even) {
+            background: rgb(51, 204, 51);
+        }
+        table tr:nth-child(odd) {
+            background: rgb(102, 153, 0);
+        }
+        th {
+            font-weight: bold;
+            background: darkgreen;
+        }
+        a {
+            text-decoration: none;
+            font-family: 'Arial', sans-serif;
+            color: rgb(255, 255, 255);
+        }
+        button {
+            color: rgb(255, 255, 255);
+            background-color: darkgreen;
+            text-align: center;
+            font-weight: bolder;
+        }
+
+
+    </style>
+</head>
+<body style="height:800px;" onload="myFloat();">
+<img id="myImg" src="/images/cart.png" width="200px" height="200px" style="position: absolute; left: 500px; top: 400px; border: solid 1px black;" />
+<div style="Text-align:center;width:100%;">
+    <h1 style="background-color: darkgreen; color: white">Order For user {{username}}</h1>
+    <p id="1">{{order}}</p>
+    <table id="2" width="400" cellpadding="10" cellspacing="5" align="center"></table>
+    <button id="button"><a href="/">Back to main page</a></button>
+</div>
+</body>
+<script>
+    var string = document.getElementById("1").innerText;
+    var arrayOfStrings = string.split(",");
+    var total = 0;
+    for (var i = 0; i < arrayOfStrings.length; i = i + 3) {
+        if (i == 0 || i == 1 || i == 2) {
+            var tr = document.createElement("tr");
+            var thOne = document.createElement("th");
+            var thTwo = document.createElement("th");
+            var thThree = document.createElement("th");
+            thOne.innerHTML = arrayOfStrings[i];
+            thTwo.innerHTML = arrayOfStrings[i + 1];
+            thThree.innerHTML = arrayOfStrings[i + 2];
+            tr.appendChild(thOne);
+            tr.appendChild(thTwo);
+            tr.appendChild(thThree);
+            document.getElementById("2").appendChild(tr);
+        } else {
+            var tr = document.createElement("tr");
+            var tdOne = document.createElement("td");
+            var tdTwo = document.createElement("td");
+            var tdThree = document.createElement("td");
+            tdOne.innerHTML = arrayOfStrings[i];
+            tdTwo.innerHTML = arrayOfStrings[i + 1];
+            tdThree.innerHTML = arrayOfStrings[i + 2];
+            tr.appendChild(tdOne);
+            tr.appendChild(tdTwo);
+            tr.appendChild(tdThree);
+            document.getElementById("2").appendChild(tr);
+            total += (arrayOfStrings[i + 2] - 0.1 + 0.1);
+        }
+    }
+    var tr = document.createElement("tr");
+    var tdOne = document.createElement("td");
+    tdOne.innerHTML = "";
+    tr.appendChild(tdOne);
+    var tdTwo = document.createElement("td");
+    tdTwo.innerHTML = "Total";
+    tr.appendChild(tdTwo);
+    var tdThree = document.createElement("td");
+    tdThree.innerHTML = total;
+    tr.appendChild(tdThree);
+    document.getElementById("2").appendChild(tr);
+
+    document.getElementById("1").remove();
+</script>
+<script type="text/javascript">
+    var step = 1;
+    var y = -1;
+    var x = 1;
+    function myFloat()
+    {
+        var img = document.getElementById("myImg");
+
+        var top = img.style.top.replace("px", "");
+
+        var left = img.style.left.replace("px", "");
+
+        if(top <= 0)
+        {
+            y = 1;
+        }
+        if(top >= document.body.clientHeight)
+        {
+            y = -1;
+        }
+        top = (top*1) + (step * y);
+        img.style.top = top + "px";
+
+        if(left <= 0)
+        {
+            x = 1;
+        }
+
+        if(left >= (document.body.clientWidth - img.clientWidth))
+        {
+            x = -1;
+        }
+        left = (left*1) + (step * x);
+        img.style.left = left + "px";
+        setTimeout("myFloat()", 20);
+    }
+</script>
+</html>
